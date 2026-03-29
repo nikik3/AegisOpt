@@ -1,0 +1,42 @@
+# AegisOpt CLI Demo Cheat Sheet
+
+This file contains the exact commands you should enter into your terminal for your recorded video to show off the `aegisopt` tool as a fully-featured compiler replacement.
+
+You can copy and paste these commands directly.
+
+---
+
+### Demo 1: The standard fast compilation with output
+*Shows AegisOpt behaving exactly like GCC, running fast, and printing the hardcoded matrix math the code produced.*
+
+```bash
+../aegisopt matrix_demo.cpp -o run_matrix --agent RuleBased --steps 1
+```
+
+---
+
+### Demo 2: The Security Veto (SAST Scanner)
+*Shows AegisOpt intercepting a dangerous compilation attempt (like a buffer overflow or unauthorized system call) and raising a red flag before outputting the code.*
+
+```bash
+../aegisopt vulnerable_demo.cpp -o run_vulnerable --agent RuleBased
+```
+
+*(Note: AegisOpt will still compile the binary for analysis purposes, but the terminal will clearly output a `[WARNING] AegisOpt: SECURITY ALERT: Potential code injection (system)` showing the veto happened before optimization).*
+
+---
+
+### Demo 3: Heavy Compilation (RL Agent vs -O3)
+*Shows the full power of the AI taking a complex mathematical program (Prime Sieve), thinking heavily, executing Reinforcement Learning strategies, and beating standard GCC O3 latency.*
+
+```bash
+../aegisopt heavy_compute.cpp -o run_heavy --agent RL --steps 3
+```
+
+---
+
+### How to use this folder:
+Run these commands from inside the `cli_test` folder:
+```bash
+cd cli_test
+```
