@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AegisOpt | Interactive Terminal</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;500;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #0a0a0f;
+            --panel-bg: rgba(20, 20, 30, 0.7);
+            --border: rgba(255, 255, 255, 0.1);
+            --accent: #00f5ff;
+            --accent-alt: #9d4edd;
+            --term-green: #00ff41;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            height: 100vh;
+            gap: 20px;
+            overflow: hidden;
+            background-image: radial-gradient(circle at 10% 10%, rgba(157, 78, 221, 0.1) 0%, transparent 40%);
+        }
+
+        /* LEFT SIDEBAR: Controls */
+        .sidebar {
+            width: 380px;
+            background: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+            overflow-y: auto;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 0 0 5px 0;
+            background: linear-gradient(90deg, var(--accent), var(--accent-alt));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h3 {
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .file-selector {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .file-opt {
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .file-opt.active {
+            background: rgba(157, 78, 221, 0.2);
+            border-color: var(--accent-alt);
+        }
+
+        .step-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 1rem;
+            transition: all 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .step-btn:hover {
+            background: rgba(0, 245, 255, 0.1);
+            border-color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .compare-btn {
+            background: linear-gradient(90deg, rgba(157, 78, 221, 0.4), rgba(0, 245, 255, 0.4));
+            border: 1px solid var(--accent);
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .compare-btn:hover {
+            background: linear-gradient(90deg, rgba(157, 78, 221, 0.6), rgba(0, 245, 255, 0.6));
+            box-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+            transform: scale(1.02);
+        }
+
+        .step-btn.loading {
+            border-color: #ffaa00;
+            animation: pulse 1s infinite alternate;
+        }
+
+        /* RIGHT PANEL: The Terminal */
+        .terminal-container {
+            flex-grow: 1;
+            background: #050505;
+            border: 1px solid #333;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+        }
+
+        .terminal-header {
+            background: #111;
+            padding: 10px 20px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot.red {
+            background: #ff5f56;
+        }
+
+        .dot.yellow {
+            background: #ffbd2e;
+        }
+
+        .dot.green {
+            background: #27c93f;
+        }
+
+        .terminal-output {
+            flex-grow: 1;
+            padding: 20px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #ddd;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+
+        .system-msg {
+            color: var(--accent);
+        }
+
+        .agent-msg {
+            color: var(--accent-alt);
+            font-weight: bold;
+        }
+
+        .success-msg {
+            color: var(--term-green);
+            font-weight: bold;
+        }
+
+        .error-msg {
+            color: #ff5f56;
+        }
+
+        @keyframes pulse {
+            from {
+                opacity: 0.7;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h1>AegisOpt Dashboard</h1>
+        <h3>Autonomous Compiler Pipeline</h3>
+
+        <!-- File Selector -->
+        <div class="file-selector">
+            <div style="font-size: 0.85rem; color: #aaa;">Target Benchmark:</div>
+            <div id="file1" class="file-opt active" onclick="selectFile('program.cpp', this)">
+                📄 program.cpp (Loop / General)
+            </div>
+            <div id="file2" class="file-opt" onclick="selectFile('branch_benchmark.cpp', this)">
+                📄 branch_benchmark.cpp (Branch Heavy)
+            </div>
+            <div id="file3" class="file-opt" onclick="selectFile('matrix_mul.cpp', this)">
+                📄 matrix_mul.cpp (Compute Heavy)
+            </div>
+            <div id="file4" class="file-opt" onclick="selectFile('vulnerable_code.cpp', this)">
+                📄 vulnerable_code.cpp (Security Test)
+            </div>
+        </div>
+
+        <button class="step-btn" onclick="runScript('feature', this)">
+            <span>1. Feature Analysis</span> <span style="font-size: 0.8rem; opacity: 0.6;">LLVM IR</span>
+        </button>
+
+        <button class="step-btn" onclick="runScript('rulebased', this)">
+            <span>2. Heuristic Agent</span> <span style="font-size: 0.8rem; color: var(--accent);">Rule-Based</span>
+        </button>
+
+        <button class="step-btn" onclick="runScript('rl', this)">
+            <span>3. DQN Optimization Agent</span> <span style="font-size: 0.8rem; color: var(--accent-alt);">RL
+                Loop</span>
+        </button>
+
+        <button class="step-btn" onclick="runScript('llm', this)">
+            <span>4. LLM Strategist</span> <span style="font-size: 0.8rem; color: #ff00ff;">Phi-3 Analysis</span>
+        </button>
+
+        <button class="step-btn" onclick="runScript('generalize', this)">
+            <span>5. Hardware Generalization</span>
+        </button>
+
+        <button class="step-btn" onclick="runScript('ordering', this)">
+            <span>6. Final System & SBOM</span>
+        </button>
+
+        <button class="step-btn compare-btn" onclick="runScript('compare', this)">
+            <span>🚀 Run & Compare (v2.0)</span> <span>⚡</span>
+        </button>
+
+        <div class="file-selector" style="margin-top: 20px;">
+            <div style="font-size: 0.85rem; color: #aaa;">Final Quantitative Evaluation:</div>
+            <button class="step-btn" onclick="loadEvaluationResults()" style="margin-bottom: 8px;">
+                <span>📊 Load evaluation_results.json</span> <span>▶</span>
+            </button>
+            <div id="results-panel"
+                style="font-size: 0.8rem; color: #aaa; white-space: pre-wrap; max-height: 200px; overflow-y: auto; border: 1px solid var(--border); border-radius: 8px; padding: 10px;">
+            </div>
+        </div>
+
+        <!-- Project Deliverables Status -->
+        <div
+            style="margin-top: 30px; padding: 15px; background: rgba(0, 245, 255, 0.05); border: 1px solid var(--accent); border-radius: 10px; backdrop-filter: blur(5px);">
+            <div style="font-size: 0.85rem; font-weight: bold; color: var(--accent); margin-bottom: 5px;">✅
+                Deliverables:</div>
+            <div style="font-size: 0.75rem; color: #ddd; line-height: 1.4;">
+                • Agentic AI-Controlled Pipeline<br>
+                • LLVM IR Analysis & Guardrails<br>
+                • Feedback-Driven Tuning (MAPE)<br>
+                • Phase-Ordering Solution (DQN)
+            </div>
+        </div>
+
+        <div style="margin-top: 20px; text-align: center;">
+            <button onclick="clearTerminal()"
+                style="background: none; border: none; color: #666; cursor: pointer; text-decoration: underline; font-size: 0.8rem;">Clear
+                Terminal</button>
+        </div>
+    </div>
+
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+            <span style="margin-left: 15px;">nikhitha@aegisopt: ~/compiler/agent</span>
+        </div>
+        <div class="terminal-output" id="terminal">
+            <span style="color: #666;">// AegisOpt Live Terminal</span><br>
+            <span style="color: #666;">// Select a file on the left, then run the AI agents.</span><br><br>
+            <span style="color: #00f5ff;">$ waiting for command...</span>
+        </div>
+    </div>
+
+    <script>
+        console.log("AegisOpt Dashboard Script Loaded");
+        const terminal = document.getElementById('terminal');
+        let currentFile = 'program.cpp';
+
+        function selectFile(filename, el) {
+            console.log("Selecting file:", filename);
+            currentFile = filename;
+            document.querySelectorAll('.file-opt').forEach(opt => opt.classList.remove('active'));
+            el.classList.add('active');
+            appendToTerminal(`\n[System] Switched target context to: ${filename}`);
+        }
+
+        function clearTerminal() {
+            terminal.innerHTML = `<span style="color: #00f5ff;">$ </span>`;
+        }
+
+        function appendToTerminal(text, type = 'normal') {
+            const lines = text.split('\n');
+            lines.forEach(line => {
+                let html = `<span>${escapeHtml(line)}</span><br>`;
+                if (line.includes('[System]')) html = `<span class="system-msg">${escapeHtml(line)}</span><br>`;
+                if (line.includes('[RL Agent]') || line.includes('Agent') || line.includes('[FeatureExtractor]')) html = `<span class="agent-msg">${escapeHtml(line)}</span><br>`;
+                if (line.includes('Faster') || line.includes('Improvement') || line.includes('FASTER!')) html = `<span class="success-msg">${escapeHtml(line)}</span><br>`;
+                if (line.includes('Error') || line.includes('Failed')) html = `<span class="error-msg">${escapeHtml(line)}</span><br>`;
+                if (line.includes('Execution Time')) html = `<span style="color: #ffbd2e;">${escapeHtml(line)}</span><br>`;
+                if (line.includes('FINAL EVALUATION')) html = `<b><span style="color: #9d4edd;">${escapeHtml(line)}</span></b><br>`;
+                terminal.innerHTML += html;
+            });
+            terminal.scrollTop = terminal.scrollHeight;
+        }
+
+        function escapeHtml(unsafe) {
+            return unsafe.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+        async function runScript(stepId, btnElement) {
+            console.log("runScript triggered:", stepId);
+            btnElement.classList.add('loading');
+            terminal.innerHTML += `<br><span style="color: #00f5ff;">$ </span><span style="color: #aaa;">Executing ${stepId}...</span><br>`;
+
+            try {
+                const url = `/api/run?step=${stepId}&file=${currentFile}`;
+                console.log("Fetching:", url);
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (response.ok) {
+                    appendToTerminal(data.stdout || "No output returned.");
+                    if (data.stderr) appendToTerminal(data.stderr, 'error');
+                } else {
+                    appendToTerminal(`Error: ${data.error || "Unknown backend error"}`, 'error');
+                }
+            } catch (error) {
+                console.error("Fetch error:", error);
+                appendToTerminal(`Network Error: ${error.message}`, 'error');
+            } finally {
+                btnElement.classList.remove('loading');
+                terminal.innerHTML += `<br><span style="color: #00f5ff;">$ </span>`;
+                terminal.scrollTop = terminal.scrollHeight;
+            }
+        }
+
+        async function loadEvaluationResults() {
+            console.log("Loading evaluation results...");
+            const panel = document.getElementById('results-panel');
+            panel.textContent = 'Loading...';
+            try {
+                const response = await fetch('/api/results');
+                const data = await response.json();
+                if (!response.ok || (typeof data === 'object' && Object.keys(data).length === 0)) {
+                    panel.textContent = 'No evaluation results found.';
+                    return;
+                }
+                panel.textContent = JSON.stringify(data, null, 2);
+            } catch (e) {
+                panel.textContent = 'Error: ' + e.message;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{
+    "LoopHeavy:True|MemHeavy:False": {
+        "loop_unroll": 26.63667271596692,
+        "vectorize": 0.0,
+        "inline_functions": -0.19,
+        "licm": 0.0040249999999999895,
+        "dce": 0.26542934568062504
+    },
+    "LoopHeavy:True|MemHeavy:True": {
+        "loop_unroll": 27.718003450935445,
+        "vectorize": 0.5536764659208306,
+        "inline_functions": 0.0040249999999999895,
+        "licm": 0.0,
+        "dce": 0.0040249999999999895
+    },
+    "LoopHeavy:False|MemHeavy:True": {
+        "loop_unroll": 0.0,
+        "vectorize": 0.0,
+        "inline_functions": 0.8865081374662265,
+        "licm": 8.517732350085751,
+        "dce": 0.26741632375
+    },
+    "LoopHeavy:False|MemHeavy:False": {
+        "loop_unroll": 5.714731736405582,
+        "vectorize": 0.0,
+        "inline_functions": 0.0,
+        "licm": 0.0,
+        "dce": 1.5627824849121486
+    }
+}

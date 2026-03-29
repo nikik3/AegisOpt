@@ -1,0 +1,3670 @@
+[
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": -3.715492454598251
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": -0.20182009790611455
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 9.016545901498564
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 12.17797565252406
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 4.234745742468927
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 10.64172355966306
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": -4.064390920977342
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 2.7850610241178466
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "vectorize",
+        "reward": 4.215058578756547
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "vectorize",
+        "reward": 1.9420382596404222
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "vectorize",
+        "reward": -2.0827726965329783
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 6.3540091354327854
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": 1.8596408815594605
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": -20.3917357762777
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": 5.365697571505546
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": -13.368959786030404
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": 5.184313572744257
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "strip",
+        "reward": 1.5620477506557962
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "strip",
+        "reward": 0.2499462042418626
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "strip",
+        "reward": 2.5745336023235743
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 6.914956071460374
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 1.4716726336977535
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": -4.187799869431235
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 11.927333724849023
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 10.45797539911618
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 9.076019918287466
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "vectorize",
+        "reward": 1.8742662844826934
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "vectorize",
+        "reward": 2.1006479231960427
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "vectorize",
+        "reward": 2.031714115865149
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "strip",
+        "reward": 0.2739565424650181
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": -1.7547960421525062
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": -1.521657870202242
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": -8.120628948116213
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": -3.546470091761732
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": -4.900983191436767
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "strip",
+        "reward": -4.062441993147132
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "strip",
+        "reward": -1.1542099829770118
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "strip",
+        "reward": -3.801758661646357
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 5.243911773557803
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 6.672350648075791
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 6.532336339085283
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 6.37116554256759
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 2.241688671128455
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 7.585572713102091
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": -1.0173744812875853
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 6.092471615258276
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 6.450297692144777
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": -0.038655366199075114
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "loop_unroll",
+        "reward": 7.72004175821806
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "vectorize",
+        "reward": -13.228208498263394
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "vectorize",
+        "reward": -6.259463365507237
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "vectorize",
+        "reward": -7.586253601719509
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "licm",
+        "reward": -1.0744555791291577
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": -3.5096227102607522
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": 0.3416109021700899
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": -1.2916478709332462
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": 6.631648687399311
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": -2.6845962188194266
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "strip",
+        "reward": -1.4236686874835718
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "strip",
+        "reward": 0.8252165194934504
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "strip",
+        "reward": -6.007897483745183
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "vectorize",
+        "reward": 2.4686029322915957
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 24,
+            "total_loops": 3,
+            "loop_density": 0.125,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 16,
+            "functions": 2,
+            "loops": 3,
+            "memory_accesses": 8,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "dce",
+        "reward": -3.484324050338378
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "licm",
+        "reward": 3.1398728321775775
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 14,
+            "total_loops": 0,
+            "loop_density": 0.0,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 4,
+            "functions": 1,
+            "loops": 0,
+            "memory_accesses": 0,
+            "memory_bound": false,
+            "is_llvm": false
+        },
+        "action": "vectorize",
+        "reward": 1.8855956792527055
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "instruction_count": 33,
+            "total_loops": 5,
+            "loop_density": 0.15151515151515152,
+            "branch_count": 0,
+            "branch_density": 0.0,
+            "load_store_count": 27,
+            "functions": 2,
+            "loops": 5,
+            "memory_accesses": 14,
+            "memory_bound": true,
+            "is_llvm": false
+        },
+        "action": "inline_functions",
+        "reward": 0.736153485202113
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -8.6148763224585
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -14.301755302312657
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 0.678183996833094
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 0.9098047693492743
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -32.60049328558997
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -12.025443753621442
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 2.362547433047783
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 12.964988816013678
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 4.761937412051944
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": -1.1058399098336387
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": -14.93840430991816
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 4.795162052076226
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "strip",
+        "reward": -36.48778252815075
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "strip",
+        "reward": -50.028602372271216
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "strip",
+        "reward": 0.5643447654970624
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 9.888199941521753
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 8.134807063457824
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 4.083139076312089
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "vectorize",
+        "reward": 20.885309278598683
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "vectorize",
+        "reward": 11.27754698263491
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "vectorize",
+        "reward": 7.537574984189731
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -3.77801261225992
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -9.559221010945084
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -2.6879484595778886
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -3.2499102859986637
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 2.9617228789216954
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 3.983631547816531
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 1.1872721951021152
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 8.25887029258894
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 11.127974408254579
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 3.17194516750394
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 3.609901728344257
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 7.733676803709797
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 1.2815841077480736
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 1.6700541985728752
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 1.107055921784691
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 2.4841388110463307
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 4.1765853721066115
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 5.353177935994586
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 8.372456412511701
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 8.008472403095833
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 5.90269806621565
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "strip",
+        "reward": -2.704314957568425
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "strip",
+        "reward": -3.111757490084906
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "strip",
+        "reward": -0.9922827267570525
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 4.350860744045333
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": -11.588468882856628
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 4.978647025198903
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -8.799121473455749
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "dce",
+        "reward": -8.292951126741544
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "vectorize",
+        "reward": -4.627032313446335
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -2.808383785126818
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "dce",
+        "reward": 1.1502276628694024
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "inline_functions",
+        "reward": 1.973550863613353
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -10.47349076858241
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -2.788564453338116
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 1.1659181280240738
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 4.810543458745401
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 5.481152326940513
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 0.7674721500261719
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 4.333185249250475
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": -7.634984437192914
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 6.1306435676971915
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 3.555523006625111
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": -5.288408452891597
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": -1.1651793964246884
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "strip",
+        "reward": -1.8043611695551216
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "strip",
+        "reward": -4.345911736107034
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "strip",
+        "reward": -0.5181859666195854
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 4.945840498662436
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 9.634601978674361
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 9.739635930570335
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "vectorize",
+        "reward": 2.0613684348184966
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 2.5200737380584557
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 2.966661576789089
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "vectorize",
+        "reward": 1.4627067390693724
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "vectorize",
+        "reward": -0.7038393172179538
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 4.849908806780367
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "dce",
+        "reward": 0.5825747117646465
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "dce",
+        "reward": -2.466775076621629
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "vectorize",
+        "reward": -0.18198000680435317
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -1.392914042348056
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 0.5391772188223936
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -36.880893226777
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -1.1577184436022898
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 6.072041750729281
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 9.965676479120818
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": -26.618046334394368
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": -9.039992371445349
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 6.106904875041168
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": -4.664983844697219
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": -4.741209079753402
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": -1.1979510183932072
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "strip",
+        "reward": 1.322207788646276
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "strip",
+        "reward": 2.416139314101233
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "strip",
+        "reward": 4.765440875876058
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 2.2629213270004853
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": -7.328906786220229
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 1.2003494166770812
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 1.5360499072796785
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 7.224721522999523
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 12.120412075424932
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 7.39472923153509
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -6.920633423878647
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 3.3014903095968635
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 25.8305047028923
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 20.001853947121578
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 24.303521890815734
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": -3.7290517236844436
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 10.804265020063877
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 5.147611437025639
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "strip",
+        "reward": 4.208420938695437
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": 4.737716220184517
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "strip",
+        "reward": 5.8380356693979065
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "strip",
+        "reward": 6.013462586250206
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 2.0107261911180436
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "loop_unroll",
+        "reward": 1.2006007889500794
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "dce",
+        "reward": -1.9640955460213987
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1307,
+            "arithmetic_ratio": 0.03519510328997705,
+            "mem_ops_ratio": 0.6985462892119357,
+            "branch_ratio": 0.08263198163733741,
+            "bb_count": 170,
+            "func_count": 146,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 1307,
+            "loop_density": 0.0007651109410864575,
+            "total_loops": 1,
+            "load_store_count": 913,
+            "memory_bound": true
+        },
+        "action": "vectorize",
+        "reward": -2.073393162934321
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -8.4134067801755
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 949,
+            "arithmetic_ratio": 0.01791359325605901,
+            "mem_ops_ratio": 0.6954689146469969,
+            "branch_ratio": 0.07586933614330875,
+            "bb_count": 128,
+            "func_count": 118,
+            "loop_proxy_score": 1,
+            "is_llvm": true,
+            "instruction_count": 949,
+            "loop_density": 0.001053740779768177,
+            "total_loops": 1,
+            "load_store_count": 660,
+            "memory_bound": true
+        },
+        "action": "vectorize",
+        "reward": -6.25146953051317
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -2.7627467779010666
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "vectorize",
+        "reward": -12.792254360227554
+    },
+    {
+        "timestamp": 1773673968.9634767,
+        "state": {
+            "llvm_instr_count": 1615,
+            "arithmetic_ratio": 0.04520123839009288,
+            "mem_ops_ratio": 0.6080495356037152,
+            "branch_ratio": 0.09907120743034056,
+            "bb_count": 197,
+            "func_count": 133,
+            "loop_proxy_score": 3,
+            "is_llvm": true,
+            "instruction_count": 1615,
+            "loop_density": 0.0018575851393188853,
+            "total_loops": 3,
+            "load_store_count": 982,
+            "memory_bound": true
+        },
+        "action": "licm",
+        "reward": -3.4444203964806395
+    }
+]

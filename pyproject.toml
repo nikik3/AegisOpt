@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aegisopt"
+version = "2.0.0"
+description = "Agentic AI-Driven Compiler Pipeline for Autonomous Optimization"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name = "Nikhitha", email = "nikhitha@example.com" }
+]
+dependencies = [
+    "numpy",
+    "requests",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "bandit",
+]

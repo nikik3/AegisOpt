@@ -1,0 +1,33 @@
+{
+    "bomFormat": "CycloneDX-Aegis",
+    "specVersion": "1.4",
+    "metadata": {
+        "timestamp": "2026-03-30T00:07:10.447195",
+        "tool": "AegisOpt-Compiler-Agent",
+        "component": {
+            "name": "vulnerable_code.cpp.opt",
+            "type": "application"
+        }
+    },
+    "components": [
+        {
+            "name": "libc",
+            "version": "glibc-2.35",
+            "description": "Standard C Library"
+        },
+        {
+            "name": "libstdc++",
+            "version": "12.0",
+            "description": "GNU Standard C++ Library"
+        }
+    ],
+    "compilation_info": {
+        "compiler": "AegisOpt Agentic Pipeline",
+        "optimization_strategy": "RL-DQN + LLM Strategy",
+        "security_gates": [
+            "ASan",
+            "UBSan",
+            "OWASP-IR-SAST"
+        ]
+    }
+}

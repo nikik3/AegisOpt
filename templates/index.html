@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AegisOpt Command Center</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Chart.js for graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AegisOpt // Command Center</h1>
+            <div id="status-bar">System Status: <span class="online">ONLINE</span></div>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>Live Performance Telemetry</h2>
+                <canvas id="perfChart"></canvas>
+            </section>
+
+            <div class="grid">
+                <section class="card">
+                    <h2>Active Agent</h2>
+                    <div id="agent-info">
+                        <p>Name: <span id="agent-name">Loading...</span></p>
+                        <p>Confidence: <span id="agent-conf">Loading...</span></p>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2>Optimization Log</h2>
+                    <ul id="opt-log">
+                        <li>System Initialized...</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Mock Graph Logic
+        const ctx = document.getElementById('perfChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: 'Execution Time (s)',
+                    data: [],
+                    borderColor: '#00ff99',
+                    tension: 0.4
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+
+        // Polling loop
+        setInterval(async () => {
+            const res = await fetch('/api/stats');
+            const data = await res.json();
+            
+            const timeLabel = new Date(data.timestamp * 1000).toLocaleTimeString();
+            chart.data.labels.push(timeLabel);
+            chart.data.datasets[0].data.push(data.current);
+            if(chart.data.labels.length > 20) {
+                chart.data.labels.shift();
+                chart.data.datasets[0].data.shift();
+            }
+            chart.update();
+
+            document.getElementById('opt-log').innerHTML += `<li>Applied: ${data.pass} (${data.current.toFixed(4)}s)</li>`;
+        }, 1000);
+        
+        setInterval(async () => {
+            const res = await fetch('/api/agent_status');
+            const data = await res.json();
+            document.getElementById('agent-name').innerText = data.active_agent;
+            document.getElementById('agent-conf').innerText = (data.confidence * 100).toFixed(1) + "%";
+        }, 2000);
+    </script>
+</body>
+</html>

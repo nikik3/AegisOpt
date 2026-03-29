@@ -1,0 +1,31 @@
+# Environments
+venv/
+env/
+.env
+
+# Cache
+__pycache__/
+.pytest_cache/
+*.pyc
+.mypy_cache/
+
+# Databases & Logs
+*.log
+*.sqlite
+*.db
+hft_telemetry.db
+
+# Compiled Binaries & LLVM IR
+*.ll
+aegis_bin
+baseline_bin
+program_opt
+prog_*
+branch_*
+
+# IDEs
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
