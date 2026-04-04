@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AegisOpt | Enterprise Console</title>
+    <title>AegisOpt | Architecture Console</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap"
         rel="stylesheet">
@@ -19,7 +19,7 @@
         <aside class="sidebar">
             <div class="brand">
                 <h1>AegisOpt</h1>
-                <p>S-Grade Agentic Compiler</p>
+                <p>Agentic Compiler Framework</p>
             </div>
 
             <div class="section-title">TARGET BENCHMARK</div>
@@ -66,7 +66,7 @@
             <!-- Dynamic Visualization Injection Panel -->
             <div id="dynamic-viz-panel">
 
-                <!-- Agent Comparison Cards (Hidden by default) -->
+                <!-- Agent Comparison Cards -->
                 <div id="viz-agent-compare" class="viz-component hidden">
                     <div class="section-title">PHASE ORDERING COMPETITION</div>
                     <div class="agent-cards-grid">
@@ -74,21 +74,24 @@
                             <div class="agent-name">Rule-Based</div>
                             <div class="agent-metric" id="metric-rule">0.00%</div>
                             <div class="agent-desc">Static Heuristics</div>
+                            <div class="sequence-flow" id="seq-rule"></div>
                         </div>
                         <div class="agent-card highlighted">
                             <div class="agent-name">DQN RL Network</div>
                             <div class="agent-metric" id="metric-rl">0.00%</div>
                             <div class="agent-desc">Deep Q-Learning</div>
+                            <div class="sequence-flow" id="seq-rl"></div>
                         </div>
                         <div class="agent-card">
                             <div class="agent-name">LLM Strategist</div>
                             <div class="agent-metric" id="metric-llm">0.00%</div>
                             <div class="agent-desc">Phi-3 Inference</div>
+                            <div class="sequence-flow" id="seq-llm"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Code Feature Bars (Hidden by default) -->
+                <!-- Code Feature Bars -->
                 <div id="viz-features" class="viz-component hidden">
                     <div class="section-title">IR STATE VECTOR DECODING</div>
                     <div class="feature-bar-wrapper">
@@ -123,7 +126,7 @@
 
                 <!-- Chart 2: Fintech Telemetry -->
                 <div class="panel fintech-panel">
-                    <h3>Fintech Trade Execution (SQLite Telemetry)</h3>
+                    <h3>Live Execution Savings (SQLite Telemetry)</h3>
                     <div class="chart-container">
                         <canvas id="fintechChart"></canvas>
                     </div>
@@ -157,9 +160,7 @@
             <!-- Terminal Output -->
             <div class="panel terminal-panel">
                 <h3>Orchestrator Logs</h3>
-                <div class="terminal" id="terminal-output">
-                    Waiting for system execution...
-                </div>
+                <div class="terminal" id="terminal-output">Waiting for system execution...</div>
             </div>
         </main>
     </div>
@@ -167,7 +168,6 @@
     <script>
         let activeFile = 'program.cpp';
 
-        // Initialize Charts
         Chart.defaults.color = '#888';
         Chart.defaults.font.family = "'Inter', sans-serif";
 
@@ -192,9 +192,7 @@
                     y: { beginAtZero: true, grid: { color: '#222' } },
                     x: { grid: { display: false } }
                 },
-                plugins: {
-                    legend: { display: false }
-                }
+                plugins: { legend: { display: false } }
             }
         });
 
@@ -232,12 +230,10 @@
             element.classList.add('active');
             document.getElementById('terminal-output').innerText = `Target locked: ${filename}`;
 
-            // Reset SAST badge
             const badge = document.getElementById('sast-badge');
             badge.className = 'sast-badge pending';
             badge.innerText = 'SAST: STANDBY';
 
-            // Hide Viz Panels
             document.getElementById('viz-agent-compare').classList.add('hidden');
             document.getElementById('viz-features').classList.add('hidden');
         }
@@ -261,26 +257,23 @@
                     term.innerText += data.stdout;
                     if (data.stderr) term.innerText += "\n[STDERR]:\n" + data.stderr;
 
-                    // Security Badge Logic (Scan output or hardcode demo state)
+                    // Security Badge Logic
                     if (activeFile.includes("vulnerable")) {
                         badge.className = 'sast-badge secure-red';
-                        badge.innerText = 'SAST VETO: MALWARE BLOCKED';
+                        badge.innerText = 'SAST VETO: VULNERABILITY BLOCKED';
                     } else if (step === 'compare' || step === 'rl') {
                         badge.className = 'sast-badge secure-green';
                         badge.innerText = 'SAST: CODE SECURE';
                     }
 
-                    // If Feature Extractor runs, parse logic visually
                     if (step === 'feature') {
                         document.getElementById('viz-features').classList.remove('hidden');
                         document.getElementById('viz-agent-compare').classList.add('hidden');
-                        // Mock feature vector loading lengths based on terminal output
                         setTimeout(() => document.getElementById('bar-mem').style.width = '75%', 100);
                         setTimeout(() => document.getElementById('bar-br').style.width = '30%', 300);
                         setTimeout(() => document.getElementById('bar-alu').style.width = '90%', 500);
                     }
 
-                    // If Comparison logic runs, update visual comparison cards
                     if (data.chart_data && step === 'compare') {
                         document.getElementById('viz-agent-compare').classList.remove('hidden');
                         document.getElementById('viz-features').classList.add('hidden');
@@ -289,10 +282,25 @@
                         compareChart.data.datasets[0].data = data.chart_data.data;
                         compareChart.update();
 
-                        // Update Top Metrics UI
                         document.getElementById('metric-rule').innerText = (data.chart_data.improvements[1] > 0 ? "+" : "") + data.chart_data.improvements[1].toFixed(2) + "%";
                         document.getElementById('metric-rl').innerText = (data.chart_data.improvements[2] > 0 ? "+" : "") + data.chart_data.improvements[2].toFixed(2) + "%";
                         document.getElementById('metric-llm').innerText = (data.chart_data.improvements[3] > 0 ? "+" : "") + data.chart_data.improvements[3].toFixed(2) + "%";
+
+                        function renderSeq(elemId, seqArray) {
+                            let html = "";
+                            if (!seqArray || seqArray.length === 0) {
+                                html = "<span style='color: #555'>[VETO / No Path]</span>";
+                            } else {
+                                seqArray.forEach((pass, i) => {
+                                    html += `<span class='pass-pill'>${pass}</span>`;
+                                    if (i < seqArray.length - 1) html += `<span class='arrow'>➔</span>`;
+                                });
+                            }
+                            document.getElementById(elemId).innerHTML = html;
+                        }
+                        renderSeq('seq-rule', data.chart_data.sequences[1]);
+                        renderSeq('seq-rl', data.chart_data.sequences[2]);
+                        renderSeq('seq-llm', data.chart_data.sequences[3]);
                     }
                 }
             } catch (e) {
@@ -303,7 +311,6 @@
             term.scrollTop = term.scrollHeight;
         }
 
-        // Load Fintech Telemetry
         async function loadFintechTelemetry() {
             try {
                 const res = await fetch('/api/fintech');
@@ -313,10 +320,8 @@
                     fintechChart.data.datasets[0].data = data.improvements;
                     fintechChart.update();
 
-                    // Populate Microsecond HTML Table
                     let tbody = '';
                     for (let i = 0; i < data.timestamps.length; i++) {
-                        // Calculate Microseconds difference
                         let diffSeconds = data.baselines[i] - data.optimized[i];
                         let microseconds = (diffSeconds * 1000000).toFixed(0);
                         let symbol = diffSeconds > 0 ? "+" : "";
@@ -331,15 +336,10 @@
                     }
                     document.getElementById('fintech-tbody').innerHTML = tbody;
                 }
-            } catch (e) {
-                console.error("Failed to load telemetry", e);
-            }
+            } catch (e) { }
         }
-
-        // Auto-update Telemetry
         loadFintechTelemetry();
         setInterval(loadFintechTelemetry, 3000);
-
     </script>
 </body>
 

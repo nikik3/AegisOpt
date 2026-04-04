@@ -232,6 +232,10 @@ h3 {
     border-radius: 8px;
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .agent-card.highlighted {
@@ -257,6 +261,43 @@ h3 {
     font-size: 0.8rem;
     color: #666;
     margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Pass Sequence Pills */
+.sequence-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    min-height: 24px;
+    width: 100%;
+    border-top: 1px solid #222;
+    padding-top: 15px;
+}
+
+.pass-pill {
+    background: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.arrow {
+    color: #555;
+    font-size: 0.8rem;
+}
+
+.agent-card.highlighted .pass-pill {
+    background: rgba(26, 188, 156, 0.15);
+    color: #1abc9c;
+    border-color: rgba(26, 188, 156, 0.4);
+    box-shadow: 0 0 10px rgba(26, 188, 156, 0.2);
 }
 
 /* Feature Bars */

@@ -116,6 +116,9 @@ class InteractiveHandler(http.server.SimpleHTTPRequestHandler):
                     llm_history = manager.history.history
                     llm_latency = llm_history[-1]["latency"] if len(llm_history) > 1 else baseline
 
+                    def get_seq(hist):
+                        return [e.get("action", e.get("strategy")) for e in hist[1:] if e.get("accepted")]
+
                     def calc_imp(lat): return ((baseline - lat) / baseline) * 100 if baseline > 0 else 0
 
                     response_data = {
@@ -125,7 +128,8 @@ class InteractiveHandler(http.server.SimpleHTTPRequestHandler):
                         "chart_data": {
                             "labels": ["GCC (-O3)", "Rule-Based", "DQN RL", "LLM"],
                             "data": [baseline, rule_latency, rl_latency, llm_latency],
-                            "improvements": [0, calc_imp(rule_latency), calc_imp(rl_latency), calc_imp(llm_latency)]
+                            "improvements": [0, calc_imp(rule_latency), calc_imp(rl_latency), calc_imp(llm_latency)],
+                            "sequences": [[], get_seq(rule_history), get_seq(rl_history), get_seq(llm_history)]
                         }
                     }
                     self.send_response(200)
