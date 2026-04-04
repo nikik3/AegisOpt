@@ -235,16 +235,26 @@ class MAPEManager:
                 active_ll = self._active_ir_path()
                 ir_rep = s.scan_ir(active_ll) if os.path.exists(active_ll) else None
                 src_rep = s.scan_source(self.program_path)
-                # Merge: prefer IR details when present
+                # Merge: Ensure issues_found matches the highest threat level
+                total_issues = 0
                 if ir_rep and ir_rep.get("status") == "success":
-                    security_report = {"source": "ir", **ir_rep, "source_scan": src_rep}
-                else:
-                    security_report = {"source": "source", **src_rep}
+                    total_issues += ir_rep.get("issues_found", 0)
+                if src_rep and src_rep.get("status") == "success":
+                    total_issues += src_rep.get("issues_found", 0)
+                    
+                security_report = {
+                    "source": "hybrid",
+                    "status": "success",
+                    "issues_found": total_issues,
+                    "ir_scan": ir_rep,
+                    "source_scan": src_rep
+                }
                 if security_report.get("issues_found", 0) > 0:
                     summary = SecurityAgent.summarize(security_report)
                     print(f"[Robustness] R-GRADE SCAN: {summary}")
                     # Detailed logging of IR patterns
-                    for issue in security_report.get("details", []):
+                    details = (ir_rep.get("details", []) if ir_rep else []) + (src_rep.get("details", []) if src_rep else [])
+                    for issue in details:
                         print(f"  - [{issue.get('severity')}] {issue.get('recommendation')}")
                     # Treat CRITICAL as a hard rejection; WARNING/LOW become penalties.
                     severities = [d.get("severity", "") for d in security_report.get("details", [])]
