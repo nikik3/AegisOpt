@@ -236,12 +236,17 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
+}
+
+.agent-card:hover {
+    border-color: #444;
 }
 
 .agent-card.highlighted {
-    border-color: #fff;
+    border-color: rgba(26, 188, 156, 0.5);
     background: var(--bg-elevated);
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(26, 188, 156, 0.05);
 }
 
 .agent-name {
@@ -255,6 +260,10 @@ h3 {
     font-weight: 600;
     color: #fff;
     font-family: 'JetBrains Mono', monospace;
+}
+
+.agent-card.highlighted .agent-metric {
+    color: var(--green-badge);
 }
 
 .agent-desc {
@@ -308,7 +317,7 @@ h3 {
 .feature-bar-wrapper span {
     display: block;
     font-size: 0.85rem;
-    color: #aaa;
+    color: #ccc;
     margin-bottom: 5px;
 }
 
@@ -322,9 +331,23 @@ h3 {
 
 .progress-fill {
     height: 100%;
-    background: #fff;
     width: 0%;
     transition: width 1.5s cubic-bezier(0.1, 0.8, 0.2, 1);
+}
+
+#bar-mem {
+    background: linear-gradient(90deg, #9b59b6, #8e44ad);
+    box-shadow: 0 0 10px rgba(155, 89, 182, 0.5);
+}
+
+#bar-br {
+    background: linear-gradient(90deg, #e67e22, #d35400);
+    box-shadow: 0 0 10px rgba(230, 126, 34, 0.5);
+}
+
+#bar-alu {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
 }
 
 /* Grid Dashboard */
@@ -353,23 +376,29 @@ h3 {
 .fintech-timeline {
     display: flex;
     width: 100%;
-    height: 6px;
-    border-radius: 3px;
+    height: 8px;
+    border-radius: 4px;
     overflow: hidden;
     margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) inset;
 }
 
 .timeline-chunk {
     font-size: 0px;
+    transition: opacity 0.3s;
+    opacity: 0.8;
 }
 
-/* Hide text */
+.timeline-chunk:hover {
+    opacity: 1;
+}
+
 .timeline-chunk.high {
-    background: #555;
+    background: linear-gradient(90deg, #e74c3c, #c0392b);
 }
 
 .timeline-chunk.low {
-    background: #222;
+    background: linear-gradient(90deg, #f39c12, #f1c40f);
 }
 
 /* Fintech Table */
@@ -394,7 +423,7 @@ h3 {
 }
 
 .text-green {
-    color: var(--text-primary);
+    color: var(--green-badge);
     font-weight: bold;
 }
 
