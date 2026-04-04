@@ -38,6 +38,38 @@ class InteractiveHandler(http.server.SimpleHTTPRequestHandler):
                 self.end_headers()
                 self.wfile.write(json.dumps({"error": str(e)}).encode("utf-8"))
             return
+        if parsed_path.path == '/api/fintech':
+            try:
+                import sqlite3
+                db_path = os.path.join(DIRECTORY, "se_attachment", "optimization_telemetry.db")
+                if not os.path.exists(db_path):
+                    db_path = os.path.join(DIRECTORY, "hft_telemetry.db")
+                
+                if os.path.exists(db_path):
+                    conn = sqlite3.connect(db_path)
+                    cursor = conn.cursor()
+                    cursor.execute('SELECT timestamp, latency_improvement_percent, pass_sequence FROM compilation_metrics ORDER BY id DESC LIMIT 10')
+                    rows = cursor.fetchall()
+                    conn.close()
+                    rows.reverse()
+                    data = {
+                        "timestamps": [r[0].split("T")[1][:8] for r in rows],
+                        "improvements": [r[1] for r in rows],
+                        "passes": [r[2] for r in rows]
+                    }
+                else:
+                    data = {"timestamps": ["No Data"], "improvements": [0], "passes": ["None"]}
+                    
+                self.send_response(200)
+                self.send_header('Content-type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps(data).encode('utf-8'))
+            except Exception as e:
+                self.send_response(500)
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": str(e)}).encode('utf-8'))
+            return
+
 
         if parsed_path.path == '/api/run':
             query_params = urllib.parse.parse_qs(parsed_path.query)
@@ -102,41 +134,7 @@ class InteractiveHandler(http.server.SimpleHTTPRequestHandler):
                     self.end_headers()
                     self.wfile.write(json.dumps({"error": f"Evaluation Error: {str(e)}"}).encode('utf-8'))
                     return
-            
-        if parsed_path.path == '/api/fintech':
-            try:
-                import sqlite3
-                db_path = os.path.join(DIRECTORY, "se_attachment", "optimization_telemetry.db")
-                if not os.path.exists(db_path):
-                    # Fallback to root if script made it there
-                    db_path = os.path.join(DIRECTORY, "hft_telemetry.db")
-                
-                if os.path.exists(db_path):
-                    conn = sqlite3.connect(db_path)
-                    cursor = conn.cursor()
-                    cursor.execute('SELECT timestamp, latency_improvement_percent, pass_sequence FROM compilation_metrics ORDER BY id DESC LIMIT 10')
-                    rows = cursor.fetchall()
-                    conn.close()
-                    # Reverse to chronological order
-                    rows.reverse()
-                    data = {
-                        "timestamps": [r[0].split("T")[1][:8] for r in rows],
-                        "improvements": [r[1] for r in rows],
-                        "passes": [r[2] for r in rows]
-                    }
-                else:
-                    data = {"timestamps": ["No Data"], "improvements": [0], "passes": ["None"]}
-                    
-                self.send_response(200)
-                self.send_header('Content-type', 'application/json')
-                self.end_headers()
-                self.wfile.write(json.dumps(data).encode('utf-8'))
-            except Exception as e:
-                self.send_response(500)
-                self.end_headers()
-                self.wfile.write(json.dumps({"error": str(e)}).encode('utf-8'))
-            return
-            
+
             if not script_to_run:
                 self.send_response(400)
                 self.end_headers()
