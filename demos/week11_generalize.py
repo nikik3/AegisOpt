@@ -39,7 +39,7 @@ def run_demo(target_file="program.cpp"):
     
     print(f"\n--- WEEK 11 FINAL REPORT ---")
     print(f"Target Program:    {target_file}")
-    print(f"Hardware Context:  {hw_context}")
+    print(f"Hardware Context:  {hp.features}")
     print(f"Baseline -O3:     {baseline:.4f}s")
     print(f"AegisOpt Optimized: {final_lat:.4f}s")
     print(f"Efficiency Gain:   +{improvement:.2f}%")

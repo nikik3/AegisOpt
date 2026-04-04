@@ -2,7 +2,7 @@
     "bomFormat": "CycloneDX-Aegis",
     "specVersion": "1.4",
     "metadata": {
-        "timestamp": "2026-04-04T10:28:26.360841",
+        "timestamp": "2026-04-04T21:38:53.230257",
         "tool": "AegisOpt-Compiler-Agent",
         "component": {
             "name": "matrix_mul.cpp.opt",
