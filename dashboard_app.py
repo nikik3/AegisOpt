@@ -41,24 +41,24 @@ class InteractiveHandler(http.server.SimpleHTTPRequestHandler):
         if parsed_path.path == '/api/fintech':
             try:
                 import sqlite3
-                db_path = os.path.join(DIRECTORY, "se_attachment", "optimization_telemetry.db")
-                if not os.path.exists(db_path):
-                    db_path = os.path.join(DIRECTORY, "hft_telemetry.db")
+                db_path = os.path.join(DIRECTORY, "hft_telemetry.db")
                 
                 if os.path.exists(db_path):
                     conn = sqlite3.connect(db_path)
                     cursor = conn.cursor()
-                    cursor.execute('SELECT timestamp, latency_improvement_percent, pass_sequence FROM compilation_metrics ORDER BY id DESC LIMIT 10')
+                    cursor.execute('SELECT timestamp, latency_improvement_percent, pass_sequence, baseline_latency, optimized_latency FROM compilation_metrics ORDER BY id DESC LIMIT 10')
                     rows = cursor.fetchall()
                     conn.close()
                     rows.reverse()
                     data = {
                         "timestamps": [r[0].split("T")[1][:8] for r in rows],
                         "improvements": [r[1] for r in rows],
-                        "passes": [r[2] for r in rows]
+                        "passes": [r[2] for r in rows],
+                        "baselines": [r[3] for r in rows],
+                        "optimized": [r[4] for r in rows]
                     }
                 else:
-                    data = {"timestamps": ["No Data"], "improvements": [0], "passes": ["None"]}
+                    data = {"timestamps": ["No Data"], "improvements": [0], "passes": ["None"], "baselines": [0], "optimized": [0]}
                     
                 self.send_response(200)
                 self.send_header('Content-type', 'application/json')
@@ -92,36 +92,38 @@ class InteractiveHandler(http.server.SimpleHTTPRequestHandler):
             if step == "compare":
                 try:
                     from mape_loop import MAPEManager
+                    import llm_strategist
+                    
                     manager = MAPEManager(program_path=target_file, security_mode=True, sanitizer_mode=False)
-                    
-                    output_msg = f"--- FINAL EVALUATION: {target_file} ---\n\n"
-                    
                     baseline = manager.run_baseline()
-                    output_msg += f"[Measure] Baseline Execution Time: {baseline:.4f} seconds\n\n"
-
-                    output_msg += "[System] Initializing Agentic Phase Ordering (RL Agent)...\n"
+                    
+                    # Run RuleBased
+                    manager.run_sequential_cycle(agent_type="RuleBased", steps=3)
+                    rule_history = manager.history.history
+                    rule_latency = rule_history[-1]["latency"] if len(rule_history) > 1 else baseline
+                    
+                    # Reset & Run RL
+                    manager = MAPEManager(program_path=target_file, security_mode=True, sanitizer_mode=False)
                     manager.run_sequential_cycle(agent_type="RL", steps=3)
+                    rl_history = manager.history.history
+                    rl_latency = rl_history[-1]["latency"] if len(rl_history) > 1 else baseline
                     
-                    history = manager.history.history
-                    for entry in history[1:]: 
-                         st = entry.get("timestamp", "?")
-                         action = entry.get("action") or entry.get("strategy")
-                         accepted = entry.get("accepted", True)
-                         gate = "ACCEPT" if accepted else f"REJECT"
-                         output_msg += f"[{st}] {gate} '{action}' -> {entry['latency']:.4f}s\n"
-                    
-                    final_latency = history[-1]["latency"]
-                    total_improvement = ((baseline - final_latency) / baseline) * 100
-                    
-                    output_msg += f"\n[Result] Compilation Complete. AI beat standard -O3 by {total_improvement:.2f}%."
+                    # Reset & Run LLM
+                    manager = MAPEManager(program_path=target_file, security_mode=True, sanitizer_mode=False)
+                    manager.run_sequential_cycle(agent_type="LLM", steps=3)
+                    llm_history = manager.history.history
+                    llm_latency = llm_history[-1]["latency"] if len(llm_history) > 1 else baseline
+
+                    def calc_imp(lat): return ((baseline - lat) / baseline) * 100 if baseline > 0 else 0
 
                     response_data = {
-                        "stdout": output_msg, 
+                        "stdout": "[Orchestrator] Comparative Analysis complete across 3 agents.", 
                         "stderr": "", 
                         "exit_code": 0,
                         "chart_data": {
-                            "labels": ["Standard GCC (-O3)", "AegisOpt (RL Agent)"],
-                            "data": [baseline, final_latency]
+                            "labels": ["GCC (-O3)", "Rule-Based", "DQN RL", "LLM"],
+                            "data": [baseline, rule_latency, rl_latency, llm_latency],
+                            "improvements": [0, calc_imp(rule_latency), calc_imp(rl_latency), calc_imp(llm_latency)]
                         }
                     }
                     self.send_response(200)

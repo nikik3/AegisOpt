@@ -2,7 +2,7 @@
     "bomFormat": "CycloneDX-Aegis",
     "specVersion": "1.4",
     "metadata": {
-        "timestamp": "2026-03-30T00:20:04.003227",
+        "timestamp": "2026-04-04T09:38:52.793876",
         "tool": "AegisOpt-Compiler-Agent",
         "component": {
             "name": "AegisOpt-Optimized-App",
