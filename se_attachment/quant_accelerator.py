@@ -19,7 +19,8 @@ def run_quant_accelerator(silent=False):
         if not silent: print(f"[Error] Fintech kernel {target_kernel} missing.")
         return
 
-    db = TelemetryDBMS(db_path=os.path.join(os.path.dirname(__file__), "hft_telemetry.db"))
+    # Unify on root directory db
+    db = TelemetryDBMS(db_path="hft_telemetry.db")
     
     if not silent: print(f"[Cloud Coordinator] Initializing HFT Pipeline for {os.path.basename(target_kernel)}...")
     

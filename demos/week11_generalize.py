@@ -37,14 +37,13 @@ def run_demo(target_file="program.cpp"):
     final_lat = history[-1]["latency"]
     improvement = ((baseline - final_lat) / baseline) * 100
     
-    print("\n--- WEEK 11 FINAL REPORT ---")
+    print(f"\n--- WEEK 11 FINAL REPORT ---")
     print(f"Target Program:    {target_file}")
-    print(f"Hardware Context:  {hp.features}")
+    print(f"Hardware Context:  {hw_context}")
     print(f"Baseline -O3:     {baseline:.4f}s")
     print(f"AegisOpt Optimized: {final_lat:.4f}s")
-    print(f"Efficiency Gain:   {improvement:+.2f}%")
-    
-    manager.print_report()
+    print(f"Efficiency Gain:   +{improvement:.2f}%")
+    print(f"============================")
 
 if __name__ == "__main__":
     target = "program.cpp"

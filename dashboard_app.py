@@ -104,12 +104,14 @@ class InteractiveHandler(http.server.SimpleHTTPRequestHandler):
                     
                     # Reset & Run RL
                     manager = MAPEManager(program_path=target_file, security_mode=True, sanitizer_mode=False)
+                    manager.run_baseline()
                     manager.run_sequential_cycle(agent_type="RL", steps=3)
                     rl_history = manager.history.history
                     rl_latency = rl_history[-1]["latency"] if len(rl_history) > 1 else baseline
                     
                     # Reset & Run LLM
                     manager = MAPEManager(program_path=target_file, security_mode=True, sanitizer_mode=False)
+                    manager.run_baseline()
                     manager.run_sequential_cycle(agent_type="LLM", steps=3)
                     llm_history = manager.history.history
                     llm_latency = llm_history[-1]["latency"] if len(llm_history) > 1 else baseline

@@ -2,10 +2,10 @@
     "bomFormat": "CycloneDX-Aegis",
     "specVersion": "1.4",
     "metadata": {
-        "timestamp": "2026-04-04T09:44:09.358704",
+        "timestamp": "2026-04-04T10:21:08.993294",
         "tool": "AegisOpt-Compiler-Agent",
         "component": {
-            "name": "black_scholes.cpp.opt",
+            "name": "program.cpp.opt",
             "type": "application"
         }
     },
