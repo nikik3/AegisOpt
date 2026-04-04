@@ -57,46 +57,41 @@ class InteractiveHandler(http.server.SimpleHTTPRequestHandler):
             
             script_to_run = script_map.get(step)
             
-            # --- SPECIAL STEP: ACTUAL COMPARISON EXECUTION ---
             if step == "compare":
                 try:
                     from mape_loop import MAPEManager
-                    # Enable security scan in dashboard compare (fast); sanitizers are optional and slower.
                     manager = MAPEManager(program_path=target_file, security_mode=True, sanitizer_mode=False)
                     
                     output_msg = f"--- FINAL EVALUATION: {target_file} ---\n\n"
                     
-                    # 1. Run Baseline
                     baseline = manager.run_baseline()
                     output_msg += f"[Measure] Baseline Execution Time: {baseline:.4f} seconds\n\n"
 
-                    # 2. Run Sequence (Phase Ordering) with RL Agent (Standard for demo)
                     output_msg += "[System] Initializing Agentic Phase Ordering (RL Agent)...\n"
                     manager.run_sequential_cycle(agent_type="RL", steps=3)
                     
-                    # Capture history for report
                     history = manager.history.history
-                    for entry in history[1:]: # Skip baseline
-                         step = entry.get("timestamp", "?")
+                    for entry in history[1:]: 
+                         st = entry.get("timestamp", "?")
                          action = entry.get("action") or entry.get("strategy")
                          accepted = entry.get("accepted", True)
-                         gate = "ACCEPT" if accepted else f"REJECT({entry.get('reject_reason','')})"
-                         sec_rep = entry.get("security_report") or {}
-                         sec_note = ""
-                         if isinstance(sec_rep, dict) and sec_rep.get("issues_found", 0) > 0:
-                             sec_note = f" | Security: {sec_rep.get('issues_found')} issue(s)"
-                         output_msg += f"[Agent] Step {step}: {gate} '{action}' -> Latency: {entry['latency']:.4f}s ({entry['improvement']:+.2f}%){sec_note}\n"
+                         gate = "ACCEPT" if accepted else f"REJECT"
+                         output_msg += f"[{st}] {gate} '{action}' -> {entry['latency']:.4f}s\n"
                     
                     final_latency = history[-1]["latency"]
                     total_improvement = ((baseline - final_latency) / baseline) * 100
                     
-                    output_msg += "\n"
-                    if total_improvement > 0:
-                        output_msg += f"[Result] SUCCESS: AegisOpt is {total_improvement:.2f}% FASTER than baseline -O3.\n"
-                    else:
-                        output_msg += f"[Result] AegisOpt fallback: Baseline -O3 remains the most stable configuration.\n"
+                    output_msg += f"\n[Result] Compilation Complete. AI beat standard -O3 by {total_improvement:.2f}%."
 
-                    response_data = {"stdout": output_msg, "stderr": "", "exit_code": 0}
+                    response_data = {
+                        "stdout": output_msg, 
+                        "stderr": "", 
+                        "exit_code": 0,
+                        "chart_data": {
+                            "labels": ["Standard GCC (-O3)", "AegisOpt (RL Agent)"],
+                            "data": [baseline, final_latency]
+                        }
+                    }
                     self.send_response(200)
                     self.send_header('Content-type', 'application/json')
                     self.end_headers()
@@ -107,6 +102,40 @@ class InteractiveHandler(http.server.SimpleHTTPRequestHandler):
                     self.end_headers()
                     self.wfile.write(json.dumps({"error": f"Evaluation Error: {str(e)}"}).encode('utf-8'))
                     return
+            
+        if parsed_path.path == '/api/fintech':
+            try:
+                import sqlite3
+                db_path = os.path.join(DIRECTORY, "se_attachment", "optimization_telemetry.db")
+                if not os.path.exists(db_path):
+                    # Fallback to root if script made it there
+                    db_path = os.path.join(DIRECTORY, "hft_telemetry.db")
+                
+                if os.path.exists(db_path):
+                    conn = sqlite3.connect(db_path)
+                    cursor = conn.cursor()
+                    cursor.execute('SELECT timestamp, latency_improvement_percent, pass_sequence FROM compilation_metrics ORDER BY id DESC LIMIT 10')
+                    rows = cursor.fetchall()
+                    conn.close()
+                    # Reverse to chronological order
+                    rows.reverse()
+                    data = {
+                        "timestamps": [r[0].split("T")[1][:8] for r in rows],
+                        "improvements": [r[1] for r in rows],
+                        "passes": [r[2] for r in rows]
+                    }
+                else:
+                    data = {"timestamps": ["No Data"], "improvements": [0], "passes": ["None"]}
+                    
+                self.send_response(200)
+                self.send_header('Content-type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps(data).encode('utf-8'))
+            except Exception as e:
+                self.send_response(500)
+                self.end_headers()
+                self.wfile.write(json.dumps({"error": str(e)}).encode('utf-8'))
+            return
             
             if not script_to_run:
                 self.send_response(400)

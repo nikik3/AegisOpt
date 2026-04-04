@@ -2,10 +2,10 @@
     "bomFormat": "CycloneDX-Aegis",
     "specVersion": "1.4",
     "metadata": {
-        "timestamp": "2026-03-30T00:20:04.003227",
+        "timestamp": "2026-03-30T01:34:37.532240",
         "tool": "AegisOpt-Compiler-Agent",
         "component": {
-            "name": "AegisOpt-Optimized-App",
+            "name": "matrix_demo.cpp.opt",
             "type": "application"
         }
     },

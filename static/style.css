@@ -1,44 +1,162 @@
+:root {
+    --bg-main: #0c0c0c;
+    --bg-panel: #141414;
+    --bg-elevated: #1e1e1e;
+    --text-primary: #f1f1f1;
+    --text-secondary: #888888;
+    --border: #2a2a2a;
+    --accent: #ffffff;
+}
+
 body {
-    background-color: #0a0a12;
-    color: #e0e0e0;
-    font-family: 'Courier New', Courier, monospace;
     margin: 0;
-    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.container {
-    max_width: 1200px;
-    margin: 0 auto;
+/* Layout */
+.layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
-header {
-    border-bottom: 2px solid #00ff99;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+.sidebar {
+    width: 320px;
+    background-color: var(--bg-panel);
+    border-right: 1px solid var(--border);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* Typography & Titles */
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+.brand p {
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-secondary);
+    margin: 0 0 40px 0;
+}
+
+.section-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+h2 { margin: 0; font-weight: 600; letter-spacing: -0.5px; }
+h3 { margin: 0 0 15px 0; font-size: 1rem; color: var(--text-secondary); font-weight: 400; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+
+/* Files */
+.file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.file-item {
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.2s;
+}
+.file-item:hover { background: var(--bg-elevated); }
+.file-item.active { background: var(--bg-elevated); border: 1px solid var(--border); color: var(--accent); }
+
+.tag { color: #555; }
+
+/* Buttons */
+.btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    text-align: left;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: background 0.2s, border 0.2s;
+}
+.btn:hover { background: var(--bg-elevated); border-color: #444; }
+
+.btn-primary {
+    background: var(--text-primary);
+    color: var(--bg-main);
+    font-weight: 600;
+    text-align: center;
+    border: none;
+}
+.btn-primary:hover { background: #d1d1d1; }
+
+/* Top Header */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
 }
+.status { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+.status-dot { width: 8px; height: 8px; background-color: #f1f1f1; border-radius: 50%; box-shadow: 0 0 8px rgba(255,255,255,0.8); }
 
-h1 { margin: 0; text-transform: uppercase; letter-spacing: 2px; color: #00ff99; }
-
-.online { color: #00ff99; font-weight: bold; text-shadow: 0 0 5px #00ff99; }
-
-.card {
-    background: #11111a;
-    border: 1px solid #333;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 255, 153, 0.1);
-}
-
-.grid {
+/* Dashboard Grid */
+.dashboard-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    margin-bottom: 20px;
+}
+.panel {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
 }
 
-canvas {
-    max-height: 300px;
+.chart-container {
+    position: relative;
+    height: 250px;
+    width: 100%;
+}
+
+/* Terminal */
+.terminal-panel { flex: 1; display: flex; flex-direction: column; }
+.terminal {
+    flex: 1;
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 15px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: #b0b0b0;
+    overflow-y: auto;
+    white-space: pre-wrap;
 }

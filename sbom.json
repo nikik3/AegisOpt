@@ -2,10 +2,10 @@
     "bomFormat": "CycloneDX-Aegis",
     "specVersion": "1.4",
     "metadata": {
-        "timestamp": "2026-03-30T00:07:10.447195",
+        "timestamp": "2026-03-31T07:28:55.865159",
         "tool": "AegisOpt-Compiler-Agent",
         "component": {
-            "name": "vulnerable_code.cpp.opt",
+            "name": "matrix_demo.cpp.opt",
             "type": "application"
         }
     },

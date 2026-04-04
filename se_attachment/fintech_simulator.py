@@ -23,7 +23,7 @@ def run_trading_day_simulation():
     for condition in market_conditions:
         print(f"\n--- [Simulation] Time: {condition['time']} ---")
         print(f"Market Volatility: {condition['volatility']} | Target Latency: {condition['target_latency']}")
-        print("Quant Developer Action: Triggering AegisOpt Auto-Tuner for new market state...")
+        print("C++ Developer Action: Triggering AegisOpt Auto-Tuner for new market state...")
         
         # Simulate the 'Quant Developer' running the accelerator
         # In a real environment, this might compile different kernels. 
@@ -40,7 +40,7 @@ def run_trading_day_simulation():
 
     print("\n====================================================")
     print(" Trading Day Simulation Complete.")
-    print(" Generating Quant Developer EOD Report...")
+    print(" Generating Developer EOD Report...")
     
     # Generate EOD Report
     records = db.get_all_records()
